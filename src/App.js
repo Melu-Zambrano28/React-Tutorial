@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navigation from './components/Navigation'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-       <nav className="navbar navbar-dark bg-dark">
-          <a href="" className="text-white">Tareas</a>
-       </nav>
+      <Navigation titutloDinamico = "Mi primera prop en react"/>
        <img src={logo} className='App-logo' alt='logo'></img>
-      
+      <Navigation titutloDinamico = "Mi segunda prop del segundo componente react"/>
       </div>
     );
   }

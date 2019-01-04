@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/Navigation';
 import { task } from './task.json';
+import TodoForm from './components/TodoForm'
 
 console.log(task);
 class App extends Component {
@@ -46,6 +47,7 @@ class App extends Component {
     /*return del render, aqui se muestran los datos ya procesados (variable tareaList) */
     return (
       <div className="App">
+
          <nav className="navbar navbar-dark bg-dark">
                 <a href="" className="text-white">
                   Task
@@ -54,12 +56,21 @@ class App extends Component {
                   </span>
                 </a>
           </nav>
-      <div className="container">
-        <div className="row mt-4">
-          {tareasList} 
-        </div>
 
-      </div>
+          <div className="container">
+              <div className="row mt-4">
+                  <div className="col-md-4 text-center">
+                      <TodoForm />
+                     </div>
+              </div>
+        </div>
+      
+        <div className="container">
+           <div className="row mt-4">
+               {tareasList} 
+           </div>
+
+         </div>
         <img src={logo} className='App-logo' alt='logo'></img>
     
       </div>

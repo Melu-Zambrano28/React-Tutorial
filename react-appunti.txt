@@ -1,0 +1,10 @@
+commandi windows
+cls: pulisci il cmd
+
+
+Commandi per installare un app react
+
+npm install -g create-react-app => installa la parola chiave con npm
+create-react-app nome-app => crea la nuova app react
+
+https://uigradients.com/#JuicyOrange : gradientes css

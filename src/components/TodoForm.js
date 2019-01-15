@@ -2,6 +2,21 @@ import React , {Component} from 'react';
 
 
 class TodoForm extends Component{
+
+  constructor (){
+    super();
+    this.state = {
+        title :'',
+        responsible:'',
+        description:'',
+        priority:'low'
+
+    };
+  }
+
+  handleInput(input){
+    console.log(input.target.value, input.target.name);
+  }
     render(){
         return (
             <div className="card">
@@ -11,8 +26,7 @@ class TodoForm extends Component{
                   type="text"
                   name="title"
                   className="form-control"
-                  value=""
-                  onChange=""
+                  onChange={this.handleInput}
                   placeholder="Title"
                   />
               </div>
@@ -21,8 +35,7 @@ class TodoForm extends Component{
                   type="text"
                   name="responsible"
                   className="form-control"
-                  value=""
-                  onChange=""
+                  onChange={this.handleInput}
                   placeholder="Responsible"
                   />
               </div>
@@ -31,8 +44,7 @@ class TodoForm extends Component{
                   type="text"
                   name="description"
                   className="form-control"
-                  value=""
-                  onChange=""
+                  onChange={this.handleInput}
                   placeholder="Description"
                   />
               </div>
@@ -40,8 +52,7 @@ class TodoForm extends Component{
                 <select
                     name="priority"
                     className="form-control"
-                    value=""
-                    onChange=""
+                    onChange={this.handleInput}
                   >
                   <option>low</option>
                   <option>medium</option>

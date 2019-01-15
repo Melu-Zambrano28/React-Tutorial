@@ -13,7 +13,10 @@ class TodoForm extends Component{
 
     };
 
-    this.handleInput = this.handleInput.bind(this); /*Este metodo pertenece al componente . Esto porque teniendo muchos inputs se puede perder el scope*/ 
+    /*Metodos que hemos definido que  pertenecen a este componente*/ 
+    this.handleInput = this.handleInput.bind(this); /*Este metodo pertenece al componente */ 
+    this.handleSubmitForm = this.handleSubmitForm.bind(this);
+
   }
 
   handleInput(input){
@@ -26,13 +29,20 @@ class TodoForm extends Component{
    this.setState({
       [name] : value
    });
-   console.log(this.state);
+  // console.log(this.state);
 
   }
+
+  handleSubmitForm(e){
+    e.preventDefault(); /*Evita que el formulario venga refreshato*/
+    console.log(this.state);
+
+  }
+
     render(){
         return (
             <div className="card">
-            <form className="card-body">
+            <form className="card-body" onSubmit={this.handleSubmitForm}>
               <div className="form-group">
                 <input
                   type="text"

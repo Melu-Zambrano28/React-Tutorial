@@ -35,6 +35,7 @@ class TodoForm extends Component{
 
   handleSubmitForm(e){
     e.preventDefault(); /*Evita que el formulario venga refreshato*/
+    this.props.onAddTareas (this.state); /*En el parametro definido en el componente que contiene el formulario agregamos el stado de nuestro componente*/
     console.log(this.state);
 
   }

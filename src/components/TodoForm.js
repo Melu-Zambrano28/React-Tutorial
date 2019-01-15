@@ -12,10 +12,22 @@ class TodoForm extends Component{
         priority:'low'
 
     };
+
+    this.handleInput = this.handleInput.bind(this); /*Este metodo pertenece al componente . Esto porque teniendo muchos inputs se puede perder el scope*/ 
   }
 
   handleInput(input){
-    console.log(input.target.value, input.target.name);
+    /*Para modificar el estado no se puede acceder directamente , react pone a disposicion
+    el metodo setState()*/
+
+   // console.log(input.target.value, input.target.name); ver valor , nombre del input
+   const {value, name} = input.target; //obtengo el nombre y el valor de los input( input = parametro)
+
+   this.setState({
+      [name] : value
+   });
+   console.log(this.state);
+
   }
     render(){
         return (
